@@ -13,95 +13,134 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+   <!-- Header -->
     <header class="bg-white shadow-md py-4">
-      <div class="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-bold text-gray-800">
-          <img
-            src="img/logo.jpg"
-            alt="Logo Grupo Essencial"
-            class="h-14 rounded-lg"
-          />
-        </a>
-        <nav>
-          <ul class="flex space-x-6">
-            <li><a href="#home" class="nav-link">Início</a></li>
-            <li><a href="#locacao" class="nav-link">Locação</a></li>
-            <li><a href="#produtos" class="nav-link">Produtos</a></li>
-            <li><a href="#contato" class="nav-link">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo do Grupo Essencial -->
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                <img src="image_d45ce3.png" alt="Logo Grupo Essencial" class="h-14 rounded-lg">
+            </a>
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-gray-600 hover:primary-blue-text transition duration-300">Início</a></li>
+                    <li><a href="#locacao" class="text-gray-600 hover:primary-blue-text transition duration-300">Locação</a></li>
+                    <li><a href="#produtos" class="text-gray-600 hover:primary-blue-text transition duration-300">Produtos</a></li>
+                    <li><a href="#contato" class="text-gray-600 hover:primary-blue-text transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="main-content">
-  <section id="home" class="section-padding">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        Soluções Completas em Higiene e Limpeza Industrial
-      </h1>
-      <p class="text-lg text-gray-600 mb-8">
-        Equipamentos de ponta, produtos de alta performance e a confiança que
-        sua empresa precisa.
-      </p>
-      <a href="#contato" class="btn-primary">Faça um Orçamento</a>
-    </div>
-  </section>
-
-  <section id="locacao" class="section-padding secondary-green-bg">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold primary-blue-text mb-6">
-        Locação de Equipamentos
-      </h2>
-      <p class="mb-8">
-        Otimize sua operação com nossas máquinas modernas. Aluguel sem
-        burocracia e com o melhor custo-benefício.
-      </p>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card p-6">
-          <h3 class="text-xl font-bold mb-2">Lavadoras de Piso</h3>
-          <p>Equipamentos eficientes para grandes áreas.</p>
+    <!-- Hero Section -->
+    <section id="home" class="primary-blue-bg text-white section-padding text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Limpeza Industrial Sem Preocupações! ✨</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Soluções completas para sua cozinha industrial: locação de máquinas de lavar louça de alta performance e produtos essenciais para um brilho impecável.</p>
+            <a href="#locacao" class="btn-primary text-lg font-semibold inline-block">Quero Alugar Minha Máquina! 👉</a>
         </div>
-        <div class="card p-6">
-          <h3 class="text-xl font-bold mb-2">Varredeiras Industriais</h3>
-          <p>Limpeza rápida e completa para seu galpão ou fábrica.</p>
-        </div>
-        <div class="card p-6">
-          <h3 class="text-xl font-bold mb-2">Aspiradores Profissionais</h3>
-          <p>Máxima sucção para resíduos sólidos e líquidos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="produtos" class="section-padding">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold primary-blue-text mb-6">
-        Linha de Produtos
-      </h2>
-      <p class="mb-8">
-        Produtos químicos de alta performance, aprovados e seguros para sua
-        indústria.
-      </p>
-      <a href="#contato" class="btn-secondary"
-        >Consultar catálogo completo</a
-      >
-    </div>
-  </section>
+    <!-- About Us/Services Section -->
+    <section class="section-padding secondary-green-bg text-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 primary-blue-text">Sua Cozinha Brilhando, Sempre! 🌟</h2>
+            <p class="text-lg leading-relaxed max-w-3xl mx-auto">No Grupo Essencial, entendemos a importância da higiene e eficiência na sua operação. Oferecemos o que há de melhor em máquinas de lavar louça industriais para locação e produtos de limpeza de alta qualidade para garantir resultados superiores.</p>
+            <div class="flex flex-wrap justify-center gap-8 mt-12">
+                <div class="w-full md:w-1/3 p-6 card text-center"> <!-- A classe 'bg-white' foi removida pois 'card' já define a cor -->
+                    <span class="text-5xl mb-4 block primary-blue-text">💧</span>
+                    <h3 class="text-2xl font-semibold mb-3">Locação de Máquinas</h3>
+                    <p class="text-gray-600">Tenha a tecnologia de ponta sem o alto custo de aquisição. Soluções flexíveis e sob medida para sua demanda.</p>
+                </div>
+                <div class="w-full md:w-1/3 p-6 card text-center"> <!-- A classe 'bg-white' foi removida pois 'card' já define a cor -->
+                    <span class="text-5xl mb-4 block primary-blue-text">🧼</span>
+                    <h3 class="text-2xl font-semibold mb-3">Detergentes Industriais</h3>
+                    <p class="text-gray-600">Poder de limpeza superior para remover as sujidades mais difíceis, garantindo louças impecáveis.</p>
+                </div>
+                <div class="w-full md:w-1/3 p-6 card text-center"> <!-- A classe 'bg-white' foi removida pois 'card' já define a cor -->
+                    <span class="text-5xl mb-4 block primary-blue-text">✨</span>
+                    <h3 class="text-2xl font-semibold mb-3">Secantes Essenciais</h3>
+                    <p class="text-gray-600">Louças secas rapidamente, sem manchas e com um brilho que impressiona. Eficiência garantida!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contato" class="section-padding primary-blue-bg text-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Entre em Contato</h2>
-      <p class="mb-8">
-        Nossa equipe está pronta para atender você. <br />
-        Solicite um orçamento ou tire suas dúvidas!
-      </p>
-      <div class="text-lg">
-        <p><strong>Telefone:</strong> (45) 9 9943-4668</p>
-        <p><strong>Email:</strong> comercial.too@grupoessencial.net.br</p>
-      </div>
-    </div>
-  </section>
-</main>
+    <!-- Dishwasher Rental Section -->
+    <section id="locacao" class="section-padding bg-white text-gray-800">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/CCE5FF/000000?text=Máquina+de+Lavar+Louça+Industrial" alt="Máquina de Lavar Louça Industrial" class="rounded-2xl shadow-lg w-full">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6 primary-blue-text">Alugue Sua Máquina de Lavar Louça Industrial! 🚀</h2>
+                <p class="text-lg mb-6 leading-relaxed">Chega de preocupações com manutenção, alto investimento e obsolescência. Com a locação do Grupo Essencial, você garante: </p>
+                <ul class="list-none space-y-3 mb-8 text-lg">
+                    <li class="flex items-center justify-center md:justify-start primary-blue-text"><span class="text-xl mr-3">✅</span> Tecnologia de ponta sempre atualizada</li>
+                    <li class="flex items-center justify-center md:justify-start primary-blue-text"><span class="text-xl mr-3">💰</span> Redução de custos operacionais</li>
+                    <li class="flex items-center justify-center md:justify-start primary-blue-text"><span class="text-xl mr-3">🛠️</span> Manutenção preventiva e corretiva inclusa</li>
+                    <li class="flex items-center justify-center md:justify-start primary-blue-text"><span class="text-xl mr-3">⏰</span> Mais tempo para focar no seu negócio</li>
+                </ul>
+                <a href="#contato" class="btn-primary text-lg font-semibold inline-block">Solicite um Orçamento Sem Compromisso! ✍️</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="section-padding secondary-green-bg text-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 primary-blue-text">Nossos Produtos: Detergente e Secante Essenciais! 🧪</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Detergent Product Card -->
+                <div class="w-full md:w-5/12 lg:w-1/3 p-6 card text-center"> <!-- A classe 'bg-white' foi removida pois 'card' já define a cor -->
+                    <img src="https://placehold.co/400x300/F0F8FF/000000?text=Detergente+Industrial" alt="Detergente Industrial" class="rounded-lg mb-6 w-full">
+                    <h3 class="text-2xl font-semibold mb-3">Detergente Super Concentrado 🧴</h3>
+                    <p class="text-gray-600 mb-4">Desenvolvido para remover gorduras, óleos e resíduos alimentares com máxima eficiência. Sua fórmula avançada garante uma limpeza profunda e higiênica.</p>
+                    <ul class="list-none text-left space-y-2 mb-6">
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">⭐</span> Alto rendimento</li>
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">💪</span> Poder desengordurante</li>
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">🌿</span> Ação biodegradável</li>
+                    </ul>
+                    <a href="#contato" class="btn-primary inline-block">Comprar Detergente! 🛒</a>
+                </div>
+                <!-- Secante Product Card -->
+                <div class="w-full md:w-5/12 lg:w-1/3 p-6 card text-center"> <!-- A classe 'bg-white' foi removida pois 'card' já define a cor -->
+                    <img src="https://placehold.co/400x300/CCE5FF/000000?text=Secante+Industrial" alt="Secante Industrial" class="rounded-lg mb-6 w-full">
+                    <h3 class="text-2xl font-semibold mb-3">Secante Brilho Intenso ✨</h3>
+                    <p class="text-gray-600 mb-4">Elimine manchas d'água e acelere a secagem das suas louças com nosso secante de alta performance. Garanta um acabamento impecável e sem resíduos.</p>
+                    <ul class="list-none text-left space-y-2 mb-6">
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">💧</span> Evita manchas</li>
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">⚡</span> Secagem rápida</li>
+                        <li class="flex items-center primary-blue-text"><span class="text-xl mr-2">💎</span> Brilho espelhado</li>
+                    </ul>
+                    <a href="#contato" class="btn-primary inline-block">Comprar Secante! 🛍️</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section-padding primary-blue-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Fale Conosco! 📞</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Tem alguma dúvida, quer um orçamento ou saber mais sobre nossos produtos e serviços? Entre em contato agora mesmo!</p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg text-gray-800">
+                <div class="mb-6">
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-6">
+                    <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone (Opcional)" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-6">
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full py-4 text-xl font-semibold">Enviar Mensagem! ✉️</button>
+            </form>
+        </div>
+    </section>
 
     <footer class="bg-gray-800 text-white py-8 text-center">
       <div class="container mx-auto px-4">
