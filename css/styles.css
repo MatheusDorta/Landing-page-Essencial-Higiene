@@ -17,10 +17,118 @@ body {
     background-color: #00a9e0;
   }
   
-  .primary-blue-text {
-    color: #00a9e0;
-  }
+
   
+  /* Cores personalizadas (se ainda não tiver, adicione ou ajuste) */
+  .primary-blue-text {
+    color: #007bff; /* Ou a cor azul principal do seu tema */
+  }
+
+/* 1. Estilo para o Header com o Corte Diagonal */
+  .custom-header-shape {
+    position: relative; /* Já tem, mas é crucial */
+    height: 150px; /* Ajuste a altura do seu header conforme a necessidade */
+    background-color: transparent; /* O fundo será dado por um pseudo-elemento */
+    overflow: visible; /* Garante que a logo não seja cortada */
+    z-index: 10; /* Garante que o header esteja acima de outros elementos, mas abaixo da logo */
+  }
+
+/* Pseudo-elemento para criar a forma branca cortada */
+  .custom-header-shape::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Cor da barra que será cortada */
+  /* Cria o corte diagonal usando clip-path */
+  /* Os valores são em percentagem para serem responsivos */
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%); /* Ajuste 70% e 85% para mudar o ângulo do corte */
+    z-index: 1; /* Fica abaixo do conteúdo real do header (logo e nav) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  }
+
+/* 2. Ajustar o Wrapper do Conteúdo dentro do Header */
+  .header-content-wrapper {
+    position: relative;
+    height: 100%; /* Ocupa a altura total do header */
+    z-index: 5; /* Fica acima do pseudo-elemento ::before */
+  /* Adiciona padding para os links não ficarem muito próximos da borda */
+    padding-left: 180px; /* Ajuste para dar espaço à logo */
+    padding-right: 1.5rem; /* Padding padrão do Tailwind */
+  }
+
+/* 3. Estilos para o contêiner da logo com efeito 3D (ajustados) */
+  .logo-3d-container {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente na altura do header */
+    left: 0; /* Começa à esquerda do header */
+    transform: translateY(-50%) translateX(0px); /* Ajuste para posicionar e "trazer" a logo para fora */
+    transform-style: preserve-3d;
+    perspective: 800px; /* Um pouco menos de perspectiva para um efeito mais sutil */
+    z-index: 20; /* Garante que a logo fique acima de tudo */
+    width: 180px; /* Tamanho do contêiner da logo */
+    height: 180px; /* Tamanho do contêiner da logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* 4. Estilos para a imagem da logo em si (ajustados) */
+  #main-logo-3d {
+    width: 90%; /* Ocupa 90% da largura do contêiner */
+    height: 90%; /* Ocupa 90% da altura do contêiner */
+    object-fit: contain;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; /* Transição para efeitos de hover */
+
+  /* Efeito de inclinação/rotação para dar o aspecto 3D e fazer "saltar" */
+  /* Ajuste esses valores para o efeito que mais se aproxima da imagem! */
+    transform: rotateY(0deg) rotateX(0deg) scale(1.1); /* Começa normal, um pouco maior */
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.2)); /* Sombra forte para profundidade */
+
+  /* Esse margin-left negativo faz a logo sair da "caixa" do container e sobrepor */
+    margin-left: -50px; /* Ajuste para mover a logo para fora da barra */
+    margin-top: -10px; /* Pequeno ajuste vertical se necessário */
+  }
+
+/* Opcional: Efeito de hover na logo */
+  #main-logo-3d:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.15); /* Cresce um pouco mais */
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.3)); /* Sombra mais intensa no hover */
+  }
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 767px) {
+  .custom-header-shape {
+      height: 100px; /* Menor altura em mobile */
+  }
+  .custom-header-shape::before {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 90% 100%, 0 100%); /* Ajuste o corte para mobile */
+  }
+  .header-content-wrapper {
+      padding-left: 120px; /* Menos espaço para logo em mobile */
+      justify-content: space-between; /* Ajusta o espaçamento */
+  }
+  .logo-3d-container {
+      width: 120px;
+      height: 120px;
+      top: 50%;
+      left: -10px; /* Ajusta o posicionamento em mobile */
+      transform: translateY(-50%) translateX(0px);
+  }
+  #main-logo-3d {
+      width: 90%;
+      height: 90%;
+      margin-left: 0; /* Remove o margin-left negativo ou ajuste conforme necessário */
+      margin-top: 0;
+      transform: scale(1); /* Sem escala extra em mobile, se preferir */
+  }
+  /* Seus links de navegação podem precisar de ajuste ou serem escondidos em menu hamburguer */
+  nav ul {
+      margin-right: 1rem; /* Espaçamento menor entre links */
+  }
+}
   .secondary-green-bg {
     background-color: #edf7ed;
   }
